@@ -9,6 +9,7 @@ spec:
   destination:
     namespace: ingress-nginx
     name: admin@labk3s-tailnet
+    server: ''
   project: default
   source:
     path: charts/ingress-nginx

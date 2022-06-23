@@ -9,6 +9,7 @@ spec:
   destination:
     namespace: default
     name: admin@labk3s-tailnet
+    server: ''
   project: default
   source:
     path: manifests/test-deployment

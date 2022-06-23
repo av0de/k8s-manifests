@@ -9,10 +9,11 @@ spec:
   destination:
     namespace: testing
     name: admin@labk3s-tailnet
+    server: ''
   project: default
   source:
     path: charts/test-chart
-    repoURL: https://github.com/av0de/k8s-manifests.git
+    repoURL: 'https://github.com/av0de/k8s-manifests.git'
     targetRevision: main
     helm:
       valueFiles:
