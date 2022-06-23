@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-chart
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: testing
+    name: admin@labk3s-tailnet
+  project: default
+  source:
+    path: charts/test-chart
+    repoURL: https://github.com/av0de/k8s-manifests.git
+    targetRevision: main
+    helm:
+      valueFiles:
+        - values.yaml
+        - values.secret.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
