@@ -6,7 +6,6 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
   source:
     repoURL: 'https://github.com/av0de/k8s-manifests.git'
     path: charts/ingress-nginx
@@ -17,6 +16,7 @@ spec:
   destination:
     server: 'https://100.94.122.53:6443'
     namespace: ingress-nginx
+  project: default
   syncPolicy:
     automated:
       prune: true
