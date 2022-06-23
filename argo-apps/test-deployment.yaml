@@ -7,13 +7,14 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
+    name: ''
     namespace: default
     server: 'https://100.94.122.53:6443'
-  project: default
   source:
     path: manifests/test-deployment
-    repoURL: https://github.com/av0de/k8s-manifests.git
+    repoURL: 'https://github.com/av0de/k8s-manifests.git'
     targetRevision: main
+  project: default
   syncPolicy:
     automated:
       prune: true

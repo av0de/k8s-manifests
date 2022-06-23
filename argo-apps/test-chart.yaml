@@ -7,9 +7,9 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
+    name: ''
     namespace: testing
     server: 'https://100.94.122.53:6443'
-  project: default
   source:
     path: charts/test-chart
     repoURL: 'https://github.com/av0de/k8s-manifests.git'
@@ -18,6 +18,7 @@ spec:
       valueFiles:
         - values.yaml
         - values.secret.yaml
+  project: default
   syncPolicy:
     automated:
       prune: true
