@@ -9,7 +9,7 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   rules:
-    - host: test.av0.de
+    - host: test.k8s.av0.de
       http:
         paths:
           - path: /
