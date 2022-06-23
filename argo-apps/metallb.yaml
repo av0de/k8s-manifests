@@ -11,12 +11,9 @@ spec:
     namespace: metallb-system
     server: 'https://100.94.122.53:6443'
   source:
-    path: charts/metallb
-    repoURL: 'https://github.com/av0de/k8s-manifests.git'
-    targetRevision: main
-    helm:
-      valueFiles:
-        - values.yaml
+    path: bin
+    repoURL: 'https://github.com/metallb/metallb-operator.git'
+    targetRevision: v0.12.0
   project: default
   #syncPolicy:
   #  automated:
