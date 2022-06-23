@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: foo-app
-          image: hashicorp/http-echo
+          image: ealen/echo-server
           args:
             - "-text=foo"
 
@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
         - name: bar-app
-          image: hashicorp/http-echo
+          image: ealen/echo-server
           args:
             - "-text=bar"
 
