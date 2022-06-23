@@ -10,6 +10,6 @@ ingress-nginx:
       annotations:
         external-dns.alpha.kubernetes.io/hostname: "av0.de."
     metrics:
-      enabled: true
+      enabled: false
       serviceMonitor:
-        #enabled: true
+        enabled: false
