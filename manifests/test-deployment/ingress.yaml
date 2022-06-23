@@ -7,13 +7,8 @@ metadata:
     ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
-  tls:
-    - secretName: test-cedi-dev-tls
-      hosts:
-        - test.cedi.dev
-
   rules:
-    - host: test.cedi.dev
+    - host: test.av0.de
       http:
         paths:
           - path: /
