@@ -15,9 +15,9 @@ spec:
     repoURL: 'https://github.com/av0de/k8s-manifests.git'
     targetRevision: main
   project: default
-  #syncPolicy:
-  #  automated:
-  #    prune: true
-  #    selfHeal: true
-  #  syncOptions:
-  #    - CreateNamespace=true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
