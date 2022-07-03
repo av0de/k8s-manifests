@@ -1,9 +1,8 @@
 metallb:
   configInline:
-    address-pools:
-      - name: tailscale-ips
-        protocol: layer2
-        addresses:
-          - 100.94.122.53/32
-          - 100.77.176.5/32
-          - 100.88.113.67/32
+    - name: tailscale-ips
+      protocol: layer2
+      addresses:
+        - 100.94.122.53/32
+        - 100.77.176.5/32
+        - 100.88.113.67/32
