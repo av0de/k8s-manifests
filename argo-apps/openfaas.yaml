@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: testing
+    namespace: openfaas
     server: 'https://100.94.122.53:6443'
   source:
     path: charts/openfaas
