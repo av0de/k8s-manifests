@@ -1,0 +1,21 @@
+openfaas:
+  kubernetesDNSDomain: cluster.local
+  functionNamespace: openfaas
+  generateBasicAuth: true
+  dashboard:
+    publicURL: https://openfaas.av0.de
+
+  ingress:
+    enabled: true
+    pathType: ImplementationSpecific
+
+    # Used to create Ingress record (should be used with exposeServices: false).
+    hosts:
+      - host: gateway.openfaas.av0.de  # Replace with gateway.example.com if public-facing
+        serviceName: gateway
+        servicePort: 8080
+        path: /
+    annotations:
+      kubernetes.io/ingress.class: nginx
+    #tls:
+    # Secrets must be manually created in the namespace.
