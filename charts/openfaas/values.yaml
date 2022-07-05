@@ -17,5 +17,8 @@ openfaas:
         path: /
     annotations:
       kubernetes.io/ingress.class: nginx
-    #tls:
-    # Secrets must be manually created in the namespace.
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    tls:
+      - secretName: gateway-openfaas-tls
+        hosts: 
+          - gateway.openfaas.av0.de
