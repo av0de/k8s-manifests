@@ -2,6 +2,10 @@ openfaas:
   kubernetesDNSDomain: cluster.local
   functionNamespace: openfaas
   generateBasicAuth: true
+
+  operator:
+    create: true
+
   dashboard:
     publicURL: https://openfaas.av0.de
 
