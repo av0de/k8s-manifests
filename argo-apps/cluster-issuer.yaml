@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lab-cluster-issuer
+  namespace: argocd
+spec:
+  destination:
+    namespace: cluster-issuer
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: kustomize/overlays/cluster-issuer
+    repoURL: https://github.com/cedi-dev/k8smanifests.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
