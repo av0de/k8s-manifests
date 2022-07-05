@@ -6,11 +6,11 @@ metadata:
 spec:
   destination:
     namespace: cluster-issuer
-    server: https://kubernetes.default.svc
+    server: https://100.94.122.53:6443
   project: default
   source:
     path: kustomize/overlays/cluster-issuer
-    repoURL: https://github.com/cedi-dev/k8smanifests.git
+    repoURL: https://github.com/av0de/k8s-manifests.git
     targetRevision: main
   syncPolicy:
     automated:
