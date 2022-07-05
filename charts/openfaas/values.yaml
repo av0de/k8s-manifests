@@ -15,7 +15,7 @@ openfaas:
 
     # Used to create Ingress record (should be used with exposeServices: false).
     hosts:
-      - host: gateway.openfaas.av0.de  # Replace with gateway.example.com if public-facing
+      - host: openfaas.av0.de  # Replace with gateway.example.com if public-facing
         serviceName: gateway
         servicePort: 8080
         path: /
@@ -25,4 +25,4 @@ openfaas:
     tls:
       - secretName: gateway-openfaas-tls
         hosts: 
-          - gateway.openfaas.av0.de
+          - openfaas.av0.de
