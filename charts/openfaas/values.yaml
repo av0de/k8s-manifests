@@ -2,6 +2,7 @@ openfaas:
   kubernetesDNSDomain: cluster.local
   functionNamespace: openfaas
   generateBasicAuth: true
+  clusterRole: true
 
   operator:
     create: true
