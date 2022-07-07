@@ -1,8 +1,11 @@
 openfaas:
   kubernetesDNSDomain: cluster.local
   functionNamespace: openfaas
-  generateBasicAuth: true
   clusterRole: true
+
+  # disable basic auth, as we are on the dev cluster which is only accessible on tailnet
+  generateBasicAuth: false
+  basic_auth: false
 
   operator:
     create: true
