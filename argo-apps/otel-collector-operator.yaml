@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lab-otel-collector-operator
+  namespace: argocd
+spec:
+  destination:
+    namespace: opentelemetry-operator-system
+    server: https://100.94.122.53:6443
+  project: default
+  source:
+    path: kustomize/overlays/otel-collector-operator
+    repoURL: https://github.com/av0de/k8s-manifests.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
