@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: cluster-issuer
-    server: https://100.94.122.53:6443
+    server: https://100.124.74.37:6443
   project: default
   source:
     path: kustomize/overlays/cluster-issuer

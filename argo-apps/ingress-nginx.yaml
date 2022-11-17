@@ -14,7 +14,7 @@ spec:
       valueFiles:
         - values.yaml
   destination:
-    server: 'https://100.94.122.53:6443'
+    server: 'https://100.124.74.37:6443'
     namespace: ingress-nginx
   project: default
   syncPolicy:

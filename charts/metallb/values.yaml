@@ -4,4 +4,4 @@ metallb:
       - name: tailscale-ips
         protocol: layer2
         addresses:
-          - 100.94.122.53/32
+          - 100.124.74.37/32

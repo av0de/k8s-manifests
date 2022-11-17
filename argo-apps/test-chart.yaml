@@ -9,7 +9,7 @@ spec:
   destination:
     name: ''
     namespace: testing
-    server: 'https://100.94.122.53:6443'
+    server: 'https://100.124.74.37:6443'
   source:
     path: charts/test-chart
     repoURL: 'https://github.com/av0de/k8s-manifests.git'
