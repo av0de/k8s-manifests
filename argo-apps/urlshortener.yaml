@@ -7,7 +7,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: urlshortener-stage
+    namespace: urlshortener
     server: 'https://100.124.74.37:6443'
   source:
     path: charts/urlshortener
