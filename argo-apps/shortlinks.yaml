@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: lab-urlshortener
+  name: lab-shortlinks
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,11 +9,11 @@ spec:
   destination:
     namespace: urlshortener
     server: 'https://100.124.74.37:6443'
-  source:
-    path: charts/urlshortener
-    repoURL: 'https://github.com/av0de/k8s-manifests.git'
-    targetRevision: main
   project: default
+  source:
+    path: manifests/shortlinks
+    repoURL: https://github.com/av0de/k8s-manifests.git
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
